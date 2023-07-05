@@ -26,7 +26,7 @@ linear_model.compile(optimizer=tf.keras.optimizers.SGD(), loss=tf.keras.losses.m
 print(linear_model.summary())
 
 linear_model.fit(X_train, y_train, validation_data=(X_val, y_val), epochs=20)
-print(linear_model.predict([ [0.0], [2.0], [3.1], [4.2], [5.2] ] ).tolist() )   
+print(linear_model.predict([ [100.0], [200.0], [300.0], [400.0], [500.0] ] ).tolist() )   
 
 export_path = 'linear-model/1/'
 tf.saved_model.save(linear_model, os.path.join('./',export_path))
